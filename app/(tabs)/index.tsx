@@ -1,3 +1,4 @@
+import MovieCard from "@/components/MovieCard";
 import SearchBar from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
@@ -73,7 +74,10 @@ export default function Index() {
                 className="mt-2 pb-32"
                 scrollEnabled={false}
                 renderItem={({ item }) => (
-                  <Text className="text-white">{item.title}</Text>
+                  <MovieCard
+                    movieData={item}
+                    key={item.id}
+                  />
                 )}
               />
             </>
